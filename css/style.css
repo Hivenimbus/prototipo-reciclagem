@@ -351,45 +351,6 @@ body {
   flex: 1;
 }
 
-/* Footer do Menu Mobile */
-.nav__menu-footer {
-  margin-top: auto;
-  padding: 24px 16px;
-  border-top: 1px solid var(--border-color);
-  background-color: rgba(46, 125, 50, 0.05);
-}
-
-.nav__menu-contact {
-  text-align: center;
-}
-
-.nav__menu-contact-text {
-  margin-bottom: 16px;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
-
-.nav__menu-contact-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 12px 24px;
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: var(--transition);
-}
-
-.nav__menu-contact-link:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-}
-
-.nav__menu-contact-link i {
-  margin-right: 8px;
-  font-size: 1.1rem;
-}
 
 /* Menu mobile escondido por padrão */
 
