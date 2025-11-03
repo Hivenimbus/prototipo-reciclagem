@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciclaMais - Soluções em Reciclagem Sustentável</title>
+    <meta name="description" content="Transforme resíduos em recursos. Soluções profissionais de reciclagem para empresas e residências. Faça seu orçamento hoje!">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header com Navegação -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="nav__logo-icon fa-solid fa-recycle"></i>
+                <span class="nav__logo-text">ReciclaMais</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link" role="menuitem">Início</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#benefits" class="nav__link" role="menuitem">Benefícios</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#process" class="nav__link" role="menuitem">Como Funciona</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link" role="menuitem">Localização</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close" aria-label="Fechar menu">
+                    <i class="nav__close-icon fa-solid fa-times"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Transforme <span class="hero__title-highlight">Resíduos</span> em <span class="hero__title-highlight">Recursos</span>
+                    </h1>
+                    <p class="hero__description">
+                        Soluções profissionais de reciclagem para empresas e residências.
+                        Contribua para um futuro mais sustentável com parceiros especializados.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um orçamento de reciclagem."
+                           target="_blank"
+                           class="btn btn--primary">
+                            Faça seu Orçamento
+                        </a>
+                        <a href="#process" class="btn btn--outline">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__image-placeholder">
+                        <i class="hero__image-icon fa-solid fa-recycle fa-10x"></i>
+                        <span class="hero__image-text">Reciclagem Sustentável</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__wave">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z" fill="#F5F5F5"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits section" id="benefits">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Por Que Escolher a ReciclaMais?</h2>
+                    <p class="section__subtitle">
+                        Benefícios que fazem a diferença para você e para o planeta
+                    </p>
+                </div>
+
+                <div class="benefits__grid">
+                    <div class="benefit__card">
+                        <div class="benefit__icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="benefit__title">Impacto Ambiental</h3>
+                        <p class="benefit__description">
+                            Reduza sua pegada de carbono e contribua para a preservação do meio ambiente.
+                        </p>
+                    </div>
+
+                    <div class="benefit__card">
+                        <div class="benefit__icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="benefit__title">Rentabilidade</h3>
+                        <p class="benefit__description">
+                            Transforme resíduos em fonte de renda com preços competitivos e pagamento rápido.
+                        </p>
+                    </div>
+
+                    <div class="benefit__card">
+                        <div class="benefit__icon">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="benefit__title">Solução Completa</h3>
+                        <p class="benefit__description">
+                            Atendemos empresas de todos os portes com logística e processamento especializados.
+                        </p>
+                    </div>
+
+                    <div class="benefit__card">
+                        <div class="benefit__icon">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3 class="benefit__title">Relatórios Detalhados</h3>
+                        <p class="benefit__description">
+                            Acompanhe o impacto da sua reciclagem com relatórios mensais personalizados.
+                        </p>
+                    </div>
+
+                    <div class="benefit__card">
+                        <div class="benefit__icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                        <h3 class="benefit__title">Coleta Programada</h3>
+                        <p class="benefit__description">
+                            Logística eficiente com coleta na data e horário que combinam com sua empresa.
+                        </p>
+                    </div>
+
+                    <div class="benefit__card">
+                        <div class="benefit__icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="benefit__title">Certificação</h3>
+                        <p class="benefit__description">
+                            Receba certificados de responsabilidade ambiental para sua empresa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process section" id="process">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Como Funciona</h2>
+                    <p class="section__subtitle">
+                        Um processo simples e eficiente para transformar resíduos em recursos
+                    </p>
+                </div>
+
+                <div class="process__timeline">
+                    <div class="process__step">
+                        <div class="process__step-number">1</div>
+                        <div class="process__step-content">
+                            <h3 class="process__step-title">Entre em Contato</h3>
+                            <p class="process__step-description">
+                                Faça seu orçamento pelo WhatsApp ou formulário de contato.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process__step">
+                        <div class="process__step-number">2</div>
+                        <div class="process__step-content">
+                            <h3 class="process__step-title">Agende a Coleta</h3>
+                            <p class="process__step-description">
+                                Combine a melhor data e horário para nossa equipe realizar a coleta.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process__step">
+                        <div class="process__step-number">3</div>
+                        <div class="process__step-content">
+                            <h3 class="process__step-title">Separe os Materiais</h3>
+                            <p class="process__step-description">
+                                Organize seus resíduos recicláveis conforme nossa orientação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process__step">
+                        <div class="process__step-number">4</div>
+                        <div class="process__step-content">
+                            <h3 class="process__step-title">Receba o Pagamento</h3>
+                            <p class="process__step-description">
+                                Receba imediatamente pelo material reciclado coletado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process__cta">
+                    <p class="process__cta-text">
+                        Pronto para começar a reciclar de forma profissional?
+                    </p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de iniciar meu processo de reciclagem."
+                       target="_blank"
+                       class="btn btn--primary">
+                        Começar Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact__header">
+                    <h2 class="contact__title">Visite Nossa Unidade</h2>
+                    <p class="contact__description">
+                        Transforme seus resíduos em oportunidade. Estamos localizados na zona industrial de São Paulo
+                        com fácil acesso e estrutura completa para receber seus materiais recicláveis.
+                    </p>
+                </div>
+
+                <div class="contact__grid">
+                    <!-- Coluna 1: Informações da Empresa -->
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">Nossa Localização</h3>
+
+                        <div class="contact__details">
+                            <div class="contact__detail">
+                                <div class="contact__detail-icon">
+                                    <i class="fa-solid fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact__detail-info">
+                                    <span class="contact__detail-label">Endereço</span>
+                                    <span class="contact__detail-value">Rua das Indústrias Verdes, 1234<br>Distrito Industrial - São Paulo/SP<br>CEP: 04567-890</span>
+                                </div>
+                            </div>
+
+                            <div class="contact__detail">
+                                <div class="contact__detail-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div class="contact__detail-info">
+                                    <span class="contact__detail-label">Horário de Funcionamento</span>
+                                    <span class="contact__detail-value">
+                                        Segunda-Sexta: 8h às 18h<br>
+                                        Sábado: 8h às 12h<br>
+                                        Domingo: Fechado
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 2: Mapa do Google Maps -->
+                    <div class="contact__map-wrapper">
+                        <div id="map" class="contact__map">
+                            <div class="contact__map-placeholder">
+                                <i class="contact__map-icon fa-solid fa-map-marked-alt"></i>
+                                <p class="contact__map-text">Carregando mapa...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                                    </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <i class="footer__logo-icon fa-solid fa-recycle"></i>
+                    <span class="footer__logo-text">ReciclaMais</span>
+                </div>
+
+                <p class="footer__description">
+                    Transformando resíduos em recursos para um futuro mais sustentável.
+                </p>
+
+                            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2025 ReciclaMais. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Overlay para menu mobile -->
+    <div class="nav__overlay" id="nav-overlay"></div>
+
+  
+    <!-- Google Maps JavaScript API -->
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap">
+  </script>
+
+  <script src="js/main.js"></script>
+  <script src="js/maps.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:fontawesome.com)",
+      "WebFetch(domain:heroicons.dev)",
+      "WebFetch(domain:feathericons.com)",
+      "WebFetch(domain:fonts.google.com)",
+      "WebFetch(domain:ionic.io)",
+      "WebFetch(domain:thenounproject.com)",
+      "WebFetch(domain:lucide.dev)",
+      "WebFetch(domain:phosphoricons.com)",
+      "WebFetch(domain:icon-sets.iconify.design)",
+      "WebFetch(domain:www.flaticon.com)",
+      "WebFetch(domain:boxicons.com)",
+      "WebFetch(domain:icons8.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
