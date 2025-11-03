@@ -21,6 +21,7 @@
 
   --border-radius: 8px;
   --border-radius-lg: 12px;
+  --border-color: #e0e0e0;
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -354,6 +355,11 @@ body {
 
 /* Menu mobile escondido por padrão */
 
+
+/* Main Content - Compensar header fixo */
+.main {
+  padding-top: 45px;
+}
 
 /* Hero Section */
 .hero {
@@ -895,6 +901,11 @@ body {
     height: 2px;
     background-color: var(--primary-color);
     transition: var(--transition);
+  }
+
+  /* Aumentar espaçamento entre header e hero title no mobile */
+  .hero {
+    padding-top: 120px;
   }
 
   /* Melhorias de acessibilidade para menu mobile */
