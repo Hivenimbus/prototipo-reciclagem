@@ -334,10 +334,18 @@ body {
   color: var(--primary-color);
   background-color: rgba(46, 125, 50, 0.15);
   font-weight: 600;
+  transform: translateX(-4px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
 }
 
 .nav__link--mobile.active-link::after {
   display: none !important;
+}
+
+.nav__link--mobile.active-link .nav__link-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .nav__link-icon {

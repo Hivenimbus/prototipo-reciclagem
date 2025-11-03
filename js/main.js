@@ -109,8 +109,8 @@ const ScrollHandler = {
   throttledUpdateActiveLink: null,
 
   init() {
-    // Throttle para melhor performance
-    this.throttledUpdateActiveLink = this.throttle(this.updateActiveLink.bind(this), 100);
+    // Throttle otimizado para mobile (50ms para melhor resposta)
+    this.throttledUpdateActiveLink = this.throttle(this.updateActiveLink.bind(this), 50);
     window.addEventListener('scroll', this.throttledUpdateActiveLink);
   },
 
@@ -127,49 +127,55 @@ const ScrollHandler = {
     };
   },
 
-  updateActiveLink() {
-    // SE MENU MOBILE ESTIVER ABERTO, NÃO FAZER NADA (PREVINE RETÂNGULO VERDE)
-    if (MenuState.isOpen) return;
+  // Função de sincronização desktop/mobile
+  syncActiveLinks(sectionId) {
+    // Remover classe active de todos os links (desktop e mobile)
+    allNavLinks.forEach(link => {
+      link.classList.remove('active-link');
+    });
 
+    // Encontrar e adicionar classe active no link desktop
+    let desktopLink = null;
+    for (let link of navLinksDesktop) {
+      if (link.getAttribute('href') === `#${sectionId}`) {
+        desktopLink = link;
+        desktopLink.classList.add('active-link');
+        break;
+      }
+    }
+
+    // Encontrar e adicionar classe active no link mobile
+    let mobileLink = null;
+    for (let link of navLinksMobile) {
+      if (link.getAttribute('href') === `#${sectionId}`) {
+        mobileLink = link;
+        mobileLink.classList.add('active-link');
+        break;
+      }
+    }
+  },
+
+  updateActiveLink() {
     const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset;
 
+    let activeSectionId = null;
+
+    // Encontrar seção ativa
     sections.forEach(section => {
       const sectionHeight = section.offsetHeight;
       const sectionTop = section.offsetTop - 100;
       const sectionId = section.getAttribute('id');
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        // Remover classe active de todos os links (desktop e mobile)
-        allNavLinks.forEach(link => {
-          link.classList.remove('active-link');
-        });
-
-        // Adicionar classe active apenas no link desktop correspondente
-        let desktopLink = null;
-        for (let link of navLinksDesktop) {
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            desktopLink = link;
-            break;
-          }
-        }
-        if (desktopLink) {
-          desktopLink.classList.add('active-link');
-        }
-
-        // No mobile, usar estilo diferente (sem retângulo verde)
-        let mobileLink = null;
-        for (let link of navLinksMobile) {
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            mobileLink = link;
-            break;
-          }
-        }
-        if (mobileLink) {
-          mobileLink.classList.add('active-link');
-        }
+        activeSectionId = sectionId;
       }
     });
+
+    // Se encontrou seção ativa, sincronizar links
+    if (activeSectionId) {
+      this.syncActiveLinks(activeSectionId);
+    }
   }
 };
 
