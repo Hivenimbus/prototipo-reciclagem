@@ -15,39 +15,107 @@
 <body>
     <!-- Header com Navegação -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <i class="nav__logo-icon fa-solid fa-recycle"></i>
+        <nav class="nav container" role="banner">
+            <a href="#home" class="nav__logo" tabindex="1">
+                <i class="nav__logo-icon fa-solid fa-recycle" aria-hidden="true"></i>
                 <span class="nav__logo-text">ReciclaMais</span>
             </a>
 
-            <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
-                <ul class="nav__list" role="menubar">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link" role="menuitem">Início</a>
+            <!-- Menu Desktop -->
+            <div class="nav__menu nav__menu--desktop" id="nav-menu-desktop">
+                <ul class="nav__list nav__list--desktop" role="menubar">
+                    <li class="nav__item" role="none">
+                        <a href="#home" class="nav__link" role="menuitem" tabindex="2">Início</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#benefits" class="nav__link" role="menuitem">Benefícios</a>
+                    <li class="nav__item" role="none">
+                        <a href="#benefits" class="nav__link" role="menuitem" tabindex="3">Benefícios</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#process" class="nav__link" role="menuitem">Como Funciona</a>
+                    <li class="nav__item" role="none">
+                        <a href="#process" class="nav__link" role="menuitem" tabindex="4">Como Funciona</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link" role="menuitem">Localização</a>
+                    <li class="nav__item" role="none">
+                        <a href="#contact" class="nav__link" role="menuitem" tabindex="5">Localização</a>
                     </li>
                 </ul>
+            </div>
 
-                <div class="nav__close" id="nav-close" aria-label="Fechar menu">
-                    <i class="nav__close-icon fa-solid fa-times"></i>
+            <!-- Botão Toggle Mobile -->
+            <button class="nav__toggle" id="nav-toggle"
+                    type="button"
+                    aria-label="Abrir menu de navegação"
+                    aria-expanded="false"
+                    aria-controls="nav-menu-mobile"
+                    tabindex="6">
+                <span class="nav__toggle-bar" aria-hidden="true"></span>
+                <span class="nav__toggle-bar" aria-hidden="true"></span>
+                <span class="nav__toggle-bar" aria-hidden="true"></span>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile Sidebar -->
+        <div class="nav__menu nav__menu--mobile"
+             id="nav-menu-mobile"
+             role="navigation"
+             aria-label="Menu principal mobile"
+             aria-hidden="true">
+
+            <!-- Header do Menu Mobile -->
+            <div class="nav__menu-header">
+                <div class="nav__menu-logo">
+                    <i class="nav__menu-logo-icon fa-solid fa-recycle" aria-hidden="true"></i>
+                    <span class="nav__menu-logo-text">ReciclaMais</span>
+                </div>
+
+                <button class="nav__close"
+                        id="nav-close"
+                        type="button"
+                        aria-label="Fechar menu de navegação"
+                        tabindex="7">
+                    <i class="nav__close-icon fa-solid fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Lista de Navegação Mobile -->
+            <ul class="nav__list nav__list--mobile" role="menubar">
+                <li class="nav__item nav__item--mobile" role="none">
+                    <a href="#home" class="nav__link nav__link--mobile" role="menuitem" tabindex="8">
+                        <i class="nav__link-icon fa-solid fa-home" aria-hidden="true"></i>
+                        <span class="nav__link-text">Início</span>
+                    </a>
+                </li>
+                <li class="nav__item nav__item--mobile" role="none">
+                    <a href="#benefits" class="nav__link nav__link--mobile" role="menuitem" tabindex="9">
+                        <i class="nav__link-icon fa-solid fa-leaf" aria-hidden="true"></i>
+                        <span class="nav__link-text">Benefícios</span>
+                    </a>
+                </li>
+                <li class="nav__item nav__item--mobile" role="none">
+                    <a href="#process" class="nav__link nav__link--mobile" role="menuitem" tabindex="10">
+                        <i class="nav__link-icon fa-solid fa-cogs" aria-hidden="true"></i>
+                        <span class="nav__link-text">Como Funciona</span>
+                    </a>
+                </li>
+                <li class="nav__item nav__item--mobile" role="none">
+                    <a href="#contact" class="nav__link nav__link--mobile" role="menuitem" tabindex="11">
+                        <i class="nav__link-icon fa-solid fa-map-marker-alt" aria-hidden="true"></i>
+                        <span class="nav__link-text">Localização</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Footer do Menu Mobile -->
+            <div class="nav__menu-footer">
+                <div class="nav__menu-contact">
+                    <p class="nav__menu-contact-text">Precisa de ajuda?</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um orçamento de reciclagem."
+                       target="_blank"
+                       class="nav__menu-contact-link">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        Fale Conosco
+                    </a>
                 </div>
             </div>
-
-            <div class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="nav__toggle-bar"></span>
-                <span class="nav__toggle-bar"></span>
-                <span class="nav__toggle-bar"></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main class="main">
