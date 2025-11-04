@@ -164,8 +164,8 @@ body {
 }
 
 .nav__logo:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  outline: none;
+  background-color: rgba(46, 125, 50, 0.1);
   border-radius: 4px;
 }
 
@@ -216,8 +216,8 @@ body {
 }
 
 .nav__link:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  outline: none;
+  background-color: rgba(46, 125, 50, 0.1);
   border-radius: 4px;
 }
 
@@ -239,8 +239,8 @@ body {
 
 .nav__toggle:focus,
 .nav__close:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  outline: none;
+  background-color: rgba(46, 125, 50, 0.2);
   border-radius: 4px;
 }
 
@@ -1085,15 +1085,13 @@ body {
 /* Focus Accessibility */
 .btn:focus,
 .nav__link:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  outline: none;
 }
 
 /* Melhorar focus para mobile menu */
 @media (max-width: 768px) {
   .nav__link:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: -2px;
+    outline: none;
     background-color: rgba(46, 125, 50, 0.1);
     border-radius: 4px;
   }
