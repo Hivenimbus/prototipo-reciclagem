@@ -229,6 +229,36 @@ body {
   background: none;
   border: none;
   padding: 8px;
+  position: relative;
+  z-index: 1002;
+  pointer-events: auto !important;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Controle de visibilidade dos botões */
+.nav__toggle.visible {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav__toggle.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.nav__close.visible {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav__close.hidden {
+  display: none;
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 .nav__toggle:hover,
@@ -870,13 +900,13 @@ body {
   }
 
   /* Mostrar botões toggle/close no mobile */
-  .nav__toggle {
+  .nav__toggle.visible {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
 
-  .nav__close {
+  .nav__close.visible {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1142,6 +1172,11 @@ body {
   color: var(--text-color);
   font-size: 1.5rem;
   transition: var(--transition);
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  display: block;
+  position: relative;
+  z-index: 1003;
 }
 
 .nav__close-icon:hover {

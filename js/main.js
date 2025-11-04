@@ -7,6 +7,18 @@ const navOverlay = document.getElementById('nav-overlay');
 const header = document.getElementById('header');
 const contactForm = document.getElementById('contact-form');
 
+// Inicializar estado visual dos botões
+function initializeButtonStates() {
+  if (navToggle) {
+    navToggle.classList.add('visible');
+    navToggle.classList.remove('hidden');
+  }
+  if (navClose) {
+    navClose.classList.add('hidden');
+    navClose.classList.remove('visible');
+  }
+}
+
 // Links de navegação (desktop e mobile)
 const navLinksDesktop = document.querySelectorAll('.nav__list--desktop .nav__link');
 const navLinksMobile = document.querySelectorAll('.nav__list--mobile .nav__link');
@@ -29,11 +41,18 @@ const MenuState = {
       navMenuMobile.classList.add('show');
       navOverlay.classList.add('show');
 
+      // Controlar visibilidade dos botões
+      if (navToggle) {
+        navToggle.classList.add('hidden');
+        navToggle.classList.remove('visible');
+      }
+      if (navClose) {
+        navClose.classList.add('visible');
+        navClose.classList.remove('hidden');
+      }
+
       // Prevenir scroll do body
       document.body.style.overflow = 'hidden';
-
-      // Não focar em link específico para evitar seleção visual incorreta
-      // O foco permanecerá no botão toggle para melhor acessibilidade
 
       this.isOpen = true;
     }
@@ -48,6 +67,16 @@ const MenuState = {
       // Esconder menu e overlay
       navMenuMobile.classList.remove('show');
       navOverlay.classList.remove('show');
+
+      // Controlar visibilidade dos botões
+      if (navToggle) {
+        navToggle.classList.add('visible');
+        navToggle.classList.remove('hidden');
+      }
+      if (navClose) {
+        navClose.classList.add('hidden');
+        navClose.classList.remove('visible');
+      }
 
       // Restaurar scroll do body
       document.body.style.overflow = '';
@@ -189,7 +218,11 @@ const NavigationEvents = {
 
     // Close menu
     if (navClose) {
-      navClose.addEventListener('click', MenuState.close);
+      navClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        MenuState.close();
+      });
     }
 
     // Overlay fecha o menu ao clicar
@@ -229,6 +262,9 @@ function handleHeaderScroll() {
 document.addEventListener('DOMContentLoaded', () => {
   NavigationEvents.init();
   ScrollHandler.init();
+
+  // Inicializar estados dos botões
+  initializeButtonStates();
 
   // Header scroll effect
   window.addEventListener('scroll', handleHeaderScroll);
